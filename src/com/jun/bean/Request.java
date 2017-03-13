@@ -1,5 +1,6 @@
 package com.jun.bean;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
@@ -12,13 +13,13 @@ public class Request {
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
-		return HashCodeBuilder.reflectionHashCode(this,false);
+		return HashCodeBuilder.reflectionHashCode(this);
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
-		return super.equals(obj);
+		return EqualsBuilder.reflectionEquals(this, obj);
 	}
 
 	public String getRequestMethod() {

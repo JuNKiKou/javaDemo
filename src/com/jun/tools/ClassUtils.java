@@ -68,7 +68,6 @@ public class ClassUtils {
 		//处理.class文件和文件目录
 		File[] files = new File(packagePath).listFiles(new FileFilter() {
 			
-			@Override
 			public boolean accept(File file) {
 				// TODO Auto-generated method stub
 				return (file.isFile() && file.getName().endsWith(".class")) || file.isDirectory() ;
